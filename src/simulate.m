@@ -18,7 +18,7 @@ for t = tspan
   Q = [Q y0'];
   fk1 = robot_arm.fk([y0(1); y0(5)]);
   f = .0001*([setpoint(1), setpoint(4)] - [y0(1), y0(4)]);
-  temp = robot_arm.jacobian(y0(3:4))'*f'
+  temp = robot_arm.jacobian(y0(3:4))'*f';
   tau = [temp(1); 0; temp(2); 0];
 end
 

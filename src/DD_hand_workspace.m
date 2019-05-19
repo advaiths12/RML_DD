@@ -10,7 +10,6 @@ epsilon = 1e-5;
 p_1 = [0, 0];
 %iterate through possible thetas
 figure();
-%%TODO choose a specific space and do finite differences, compare to jacobian
 for theta1 = 0:.01:pi
     for theta2 = theta1:.01:theta1 + pi/2
          %determined singularity position
@@ -23,7 +22,6 @@ for theta1 = 0:.01:pi
 %             end
             if(point(2) >= 0)
                 jacob = jacobian(linkage.l1, linkage.l2, linkage.l3, linkage.l4, theta1, theta2);
-                
                 %get points of arm
                 p_2 = [linkage.l1*cos(theta1), linkage.l1*sin(theta1)];
                 p_4 = [linkage.l4*cos(t2), linkage.l4*sin(t2)];
@@ -66,9 +64,7 @@ for theta1 = 0:.01:pi
                     x = [x, point(1)];
                     y = [y, point(2)];
 
-                end
-            
-           
+               end          
         end
     end
 end
