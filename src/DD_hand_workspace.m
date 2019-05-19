@@ -1,6 +1,5 @@
 %create robot class of measurements given on spec sheet
-linkage = FiveBarLinkage(45/1000,30/1000,20/1000,50/1000);
-
+linkage = FiveBarLinkage(45/1000,30/1000,20/1000,50/1000, 0.1, 0.1,0.1, 0.1, .5, .5)
 x = [];
 y = [];
 
@@ -17,7 +16,7 @@ for theta1 = 0:.01:pi
          %determined singularity position
             t2 = theta2;
             point = linkage.fk([theta1, theta2]);
-            p_3 = point
+            p_3 = point;
 %             if(abs(theta2 - theta1) == 1) 
 %                         s_x = [s_x, p_3(1)];
 %                         s_y = [s_y, p_3(2)];
@@ -40,23 +39,23 @@ for theta1 = 0:.01:pi
                        
                      
 %                 
-                        %graph a1
-                        hold on;
-                        %plot a1
-                        plot([p_2(1), p_1(1)], [p_2(2), p_1(2)], "r");
-
-                        %plot a2
-                        plot([p_3(1), p_2(1)], [p_3(2), p_2(2)], "b");
-
-                        %plot a3
-                        plot([p_3(1), p_4(1)], [p_3(2), p_4(2)], "b");
-
-                        %plot a4
-                        plot([p_4(1), p_1(1)], [p_4(2), p_1(2)], "g");
-                        plot([p_3(1)], [p_3(2)], "rx");
-                        axis([-.09 .09 -.09 .09]);
-                        drawnow;
-                        hold off;
+%                         %graph a1
+%                         hold on;
+%                         %plot a1
+%                         plot([p_2(1), p_1(1)], [p_2(2), p_1(2)], "r");
+% 
+%                         %plot a2
+%                         plot([p_3(1), p_2(1)], [p_3(2), p_2(2)], "b");
+% 
+%                         %plot a3
+%                         plot([p_3(1), p_4(1)], [p_3(2), p_4(2)], "b");
+% 
+%                         %plot a4
+%                         plot([p_4(1), p_1(1)], [p_4(2), p_1(2)], "g");
+%                         plot([p_3(1)], [p_3(2)], "rx");
+%                         axis([-.09 .09 -.09 .09]);
+%                         drawnow;
+%                         hold off;
                         
 
                         s_x = [s_x, point(1)];
