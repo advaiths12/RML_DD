@@ -1,0 +1,2 @@
+# RML_DD
+Summary: Over the past semester, my research mainly revolved around modelling and simulating the direct drive gripper hand. The hand itself was composed of two 5-bar linkages which came together to create a gripper. The work was both in creating a valid workspace for the linkages and modeling a possible spring-dampener system for the fingers of the gripper. The codebase can be found here.
